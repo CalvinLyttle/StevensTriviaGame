@@ -37,7 +37,7 @@ router
      // console.log("inside register post method...", usernameInput);
       res.status(400).render("userRegister", {
         title: "SignUp",
-        error: "Please enter email and password.",
+        error: "Please enter email and password to log-in the Trivia Game.",
       });
       return;
     }
@@ -101,8 +101,8 @@ router.route("/login").post(async (req, res) => {
   if (!usernameInput || !passwordInput) {
     console.log("inside login ...", req.body.passwordInput);
     res.status(400).render("userLogin", {
-      title: "Welcome to Stevens Trivia!",
-      error: "Please enter email and password.",
+      title: "Login",
+      error: "Please enter email and password to log-in the Trivia Game.",
     });
     return;
   }
