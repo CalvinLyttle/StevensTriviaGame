@@ -1,0 +1,27 @@
+{
+  "name": "stevenstriviagame",
+  "version": "1.0.0",
+  "description": "This is a web app for Stevens Trivia Game - HCI Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CalvinLyttle/StevensTriviaGame.git"
+  },
+  "author": "Parul Mahajan 20010763",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CalvinLyttle/StevensTriviaGame/issues"
+  },
+  "homepage": "https://github.com/CalvinLyttle/StevensTriviaGame#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "mongodb": "^4.12.1"
+  }
+}
