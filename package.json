@@ -1,0 +1,27 @@
+{
+  "name": "stevenstriviagame",
+  "version": "1.0.0",
+  "description": "CS 545 Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CalvinLyttle/StevensTriviaGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CalvinLyttle/StevensTriviaGame/issues"
+  },
+  "homepage": "https://github.com/CalvinLyttle/StevensTriviaGame#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7"
+  }
+}
