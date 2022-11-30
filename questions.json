@@ -1,4 +1,4 @@
-[
+{ "q": [
     {
         "question": "When was Stevens founded?",
         "answer": "1870",
@@ -93,5 +93,6 @@
         "question": "Which of these is NOT a real pre-orientation program?",
         "answer": "Face Your Fears",
         "wrongs": ["Explore Your Neighborhood", "Flavors of New York", "Health & Wellness"]
-    }    
-]
+    }
+    ]
+}
