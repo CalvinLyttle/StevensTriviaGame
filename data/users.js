@@ -100,3 +100,4 @@ module.exports = {
   //scoreBoard functions - Joseph?
   //continue playing functions - Savil
 };
+

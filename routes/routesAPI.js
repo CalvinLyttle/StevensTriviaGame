@@ -206,4 +206,5 @@ router.route("/logout").get(async (req, res) => {
     title: "Logout",
   });
 });
+
 module.exports = router;
