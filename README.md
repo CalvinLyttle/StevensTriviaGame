@@ -26,3 +26,7 @@ Tentative Functions :-
 Tentative functions :- 
 1. Middlewares 
 2. Timer - can store in db based - will decide towards the ending
+
+//Parul :- 
+installed bcrypt for hashing password.
+installed express and express-handlebars for routing.

@@ -1,0 +1,51 @@
+{{!
+
+If the user is NOT logged in, and 'GET /register' endpoint is called, you will render this sign-up form view that displays two input (one for the username and one for password):
+-The form will be used to submit the POST request to the '/register' route on the server and must have an 'id' of 'registration-form'
+-The input for the username must have a 'name' and 'id' of 'usernameInput'
+-The input for the password must have a 'name' and 'id' of 'passwordInput' and should be an input type of password.
+
+Do not forget to use labels for your inputs! For the labels, you will use the method of using the 'for' attribute. 
+You should have a label for both the username and password inputs referencing their id's in the for attribute of the label
+
+You will also have a link on this page that links to '/' and has the text "Already have an account? Click here to log-in"
+
+}}
+<form
+  id="registration-form"
+  method="POST"
+  action="/register"
+>
+  <h2>{{title}}</h2>
+
+  <label for="emailInput">Email</label>
+  <input
+    placeholder="sophie@gmail.com"
+    id="emailInput"
+    name="emailInput"
+    type="email"
+    pattern=".+@gmail\.com"
+  />
+  <label for="usernameInput">Username</label>
+  <input
+    placeholder="Sophie"
+    id="usernameInput"
+    name="usernameInput"
+  />
+
+  <label for="passwordInput">Password</label>
+  <input
+    type="password"
+    placeholder="password"
+    name="passwordInput"
+    id="passwordInput"
+  />
+
+  <button type="submit">Register</button>
+
+  {{#if error}}
+    <p>{{error}}</p>
+  {{/if}}
+
+  <a href="/login">Already have an account? Click here to log-in</a>
+</form>
