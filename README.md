@@ -1,6 +1,8 @@
 # StevensTriviaGame
 The Figma link for the app : https://www.figma.com/file/sXaLE4XsmLgoa3B9nEkr6D/Stevens-Trivia-Game?node-id=21%3A377&t=TMHjkSyde6usyzYJ-0
 
+To run the application - node app.js
+
 We will have 5 screens ( as shown in Figma ) :- 
 
 Screen 1 : Login  - Nidhi + Parul
@@ -30,3 +32,4 @@ Tentative functions :-
 //Parul :- 
 installed bcrypt for hashing password.
 installed express and express-handlebars for routing.
+
