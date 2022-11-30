@@ -1,7 +1,9 @@
 # StevensTriviaGame
 The Figma link for the app : https://www.figma.com/file/sXaLE4XsmLgoa3B9nEkr6D/Stevens-Trivia-Game?node-id=21%3A377&t=TMHjkSyde6usyzYJ-0
 
-To run the application - node app.js
+*Run 'npm install' to install -all of the necessary packages.
+
+*Finally, run 'npm start'! The website is at: http://localhost:3000
 
 We will have 5 screens ( as shown in Figma ) :- 
 
