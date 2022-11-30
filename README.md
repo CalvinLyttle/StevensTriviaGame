@@ -9,7 +9,7 @@ Screen 2: Welcome - Nidhi + Parul
 
 Screen 3: Questions/Answers  - Calvin
 
-Screen 4: Continue playing or not
+Screen 4: Continue playing or not - Savil
 
 Screen 5: Scoreboard
 
