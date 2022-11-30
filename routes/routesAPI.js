@@ -125,7 +125,9 @@ router
     try {
       let result = await userData.createUser(usernameInput, passwordInput);
       if (result.insertedUser) {
+        req.session.usernameInput = usernameInput;
         res.status(200).redirect("/welcome");
+
       } else {
         res.status(500).json({ error: "Internal Server Error - please contact Admin." });
       }
