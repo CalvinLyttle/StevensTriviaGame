@@ -1,0 +1,33 @@
+
+
+  
+    <h1 id="title">Stevens Quiz</h1>
+
+    <!-- quiz-container -->
+    
+
+        
+    <!-- scoreboard section -->
+    
+        
+        
+        {{!-- <button type="button" id="score-btn" onclick="backToQuiz()">Yes</button>
+        <button type="button" id="check-answer" onclick="checkAnswer()">No</button>
+    </div> --}}
+
+    <form method="post" name="finalPage" id="scoreboard" action="/continuePlay">
+        <h2 id="score-title">Do you want to continue playing?</h2>
+        <h2 id="score"></h2>
+
+        <input type="submit" name="continuePlay" value="yes">
+        <input type="submit" name="continuePlay" value="no">
+
+    </form>
+
+    <!-- answers section -->
+    
+
+    <!-- javascript file source -->
+    <script src="/quiz.js"></script>
+</body>
+</html>
