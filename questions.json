@@ -2,97 +2,97 @@
     {
         "question": "When was Stevens founded?",
         "answer": "1870",
-        "wrongs": ["1770", "1820", "1920"]
+        "guesses": ["1870", "1770", "1820", "1920"]
     },
     {
         "question": "What is Stevens' mascot?",
         "answer": "Ducks",
-        "wrongs": ["Geese", "Steves", "Tigers"]
+        "guesses": ["Ducks", "Geese", "Steves", "Tigers"]
     },
     {
         "question": "How many floors is the Stevens library?",
         "answer": "3",
-        "wrongs": ["1", "2", "4"]
+        "guesses": ["1", "2", "3", "4"]
     },
     {
         "question": "What is the oldest building on campus?",
         "answer": "EAS",
-        "wrongs": ["Kidde", "Morton", "Howe"]
+        "guesses": ["EAS", "Kidde", "Morton", "Howe"]
     },
     {
         "question": "How large is Stevens' campus",
         "answer": "55 acres",
-        "wrongs": ["100 acres", "20 acres", "70 acres"]
+        "guesses": ["55 acres", "100 acres", "20 acres", "70 acres"]
     },
     {
         "question": "How many students are at Stevens?",
         "answer": "8000",
-        "wrongs": ["10,000", "15,000", "20,000"]
+        "guesses": ["8000", "10,000", "15,000", "20,000"]
     },
     {
         "question": "Who founded Stevens?",
         "answer": "Edwin A Stevens",
-        "wrongs": ["Colonel John Stevens", "Wesley J Howe", "Thomas Jefferson"]
+        "guesses": ["Edwin A Stevens", "Colonel John Stevens", "Wesley J Howe", "Thomas Jefferson"]
     },
     {
         "question": "Who is the current president of Stevens",
         "answer": "Nariman Favardin",
-        "wrongs": ["Wesley J Howe", "Joe Biden", "Harold Reveche"]
+        "guesses": ["Nariman Favardin", "Wesley J Howe", "Joe Biden", "Harold Reveche"]
     },
     {
         "question": "What is the oldest club at Stevens?",
         "answer": "Stevens Dramatic Society",
-        "wrongs": ["RGB Photography", "Off Center Comedy", "Art Club"]
+        "guesses": ["RGB Photography", "Off Center Comedy", "Stevens Dramatic Society", "Art Club"]
     },
     {
         "question": "When was the Stevens football team disbanded?",
         "answer": "1924",
-        "wrongs": ["1872", "1954", "1973"]
+        "guesses": ["1872", "1954", "1973", "1924"]
     },
     {
         "question": "Which of these is NOT a major at Stevens?",
         "answer": "Political Science",
-        "wrongs": ["Accounting", "Data Visualization", "Literature"]
+        "guesses": ["Accounting", "Data Visualization", "Political Science", "Literature"]
     },
     {
         "question": "Which school is based in the Babbio building",
         "answer": "School of Business",
-        "wrongs": ["School of Engineering", "College of Arts and Letters", "School of Systems and Enterprises"]
+        "guesses": ["School of Business", "School of Engineering", "College of Arts and Letters", "School of Systems and Enterprises"]
     },
     {
         "question": "Which dorm was taken down to build the UCC towers?",
         "answer": "Hayden Hall",
-        "wrongs": ["Technology Hall", "Dobelaar Hall", "Murphy Hall"]
+        "guesses": ["Technology Hall", "Dobelaar Hall", "Hayden Hall", "Murphy Hall"]
     },
     {
         "question": "What is the name of the main dining hall at Stevens?",
         "answer": "Pierce",
-        "wrongs": ["Colonel Johns", "Red and Gray", "Stevens Hall"]
+        "guesses": ["Colonel Johns", "Red and Gray", "Stevens Hall", "Pierce"]
     },
     {
         "question": "In what year did Stevens begin admitting women?",
         "answer": "1971",
-        "wrongs": ["1870", "1918", "1954"]
+        "guesses": ["1870", "1918", "1971", "1954"]
     },
     {
         "question": "What is the most popular undergraduate major at Stevens?",
         "answer": "Mechanical Engineering",
-        "wrongs": ["Computer Science", "Civil Engineering", "Business & Technology"]
+        "guesses": ["Computer Science", "Civil Engineering", "Business & Technology","Mechanical Engineering"]
     },
     {
         "question": "Who was the first president of Stevens?",
         "answer": "Henry Morton",
-        "wrongs": ["Wesley J Howe", "Franklin Pierce", "Alexander Humphreys"]
+        "guesses": ["Wesley J Howe", "Franklin Pierce", "Henry Morton", "Alexander Humphreys"]
     },
     {
         "question": "Which of the following people went to Stevens?",
         "answer": "The co-inventor of bubble wrap",
-        "wrongs": ["The CEO of Paypal", "The inventor of the mechanical pencil", "The 6th man to go to space"]
+        "guesses": ["The CEO of Paypal", "The co-inventor of bubble wrap", "The inventor of the mechanical pencil", "The 6th man to go to space"]
     },
     {
         "question": "Which of these is NOT a real pre-orientation program?",
         "answer": "Face Your Fears",
-        "wrongs": ["Explore Your Neighborhood", "Flavors of New York", "Health & Wellness"]
+        "guesses": ["Explore Your Neighborhood", "Face Your Fears", "Flavors of New York", "Health & Wellness"]
     }
     ]
 }

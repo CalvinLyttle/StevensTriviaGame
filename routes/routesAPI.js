@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 let userData = require("../data/users");
+const datafuncs = require("../data/index");
 
 //this is the root route '/'
 router.route("/").get(async (req, res) => {
@@ -45,12 +46,25 @@ router.route("/welcome").get(async (req, res) => {
 // and answers from Welcome Page only. 
 // hence, commenting it for now.
 
-/*router
+router
   .route("/trivia")
   .get(async (req, res) => {
     if (req.session.usernameInput) {
       // if user is authenticated
-      res.render("triviaQuestionsAnswers");
+      let question = datafuncs.chooseQuestion();
+      res.render("triviaQuestionsAnswers",
+      {
+        question: question.question,
+        a1: question.guesses[0],
+        a1Right: question.guesses[0] === question.answer,
+        a2: question.guesses[1],
+        a2Right: question.guesses[1] === question.answer,
+        a3: question.guesses[2],
+        a3Right: question.guesses[2] === question.answer,
+        a4: question.guesses[3],
+        a4Right: question.guesses[3] === question.answer,
+        right: question.answer
+      });
       return;
     }
     //  not authenticated -
@@ -62,7 +76,6 @@ router.route("/welcome").get(async (req, res) => {
     //display the question answers and post the answers into a form ??? TBD
     // all the necessary functions will be called from here, functions that are defined in 'data/users'
   }); 
-  */
 
 router
   .route("/register")
