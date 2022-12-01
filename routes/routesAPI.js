@@ -18,7 +18,7 @@ router.route("/").get(async (req, res) => {
 // after the user login/register successfully, '/welcome' page will be displayed.
 router.route("/welcome").get(async (req, res) => {
   console.log("username in welcome page..", req.session.usernameInput)
-  res.render("resultPage", {
+  res.render("welcomePage", {
     title: "Welcome",
     name: req.session.usernameInput
   });
@@ -220,6 +220,13 @@ router.route("/final").post(async (req, res) => {
     res.render("triviaQuestionsAnswers");
   }else{
     res.render("resultPage");
+  }
+});
+router.route("/result").post(async (req, res) => {
+  if(req.body.finalScore == 'play_again'){
+    res.render("triviaQuestionsAnswers");
+  }else if(req.body.finalScore == 'main_page'){
+    res.render("welcomePage");
   }
 });
 
