@@ -3,11 +3,28 @@ with the 'Current Score' information and a button 'Tap to Play'
 
 ?? and a link 'How to Play' - TBD ?
 }}
-<div>
-  <h2>{{title}}, {{name}}!</h2>
-  <p>Current Score is :</p>
-  <button>Tap to Play</button>
-  <p> can add script in the end to display the questions and asnwers - TBD</p>
-  <p> A link to display 'How to play?' -  TBD</p>
-  <a href="/logout">Click here to Logout</a>
+<div class="text-center">
+  <h2>{{title}} {{name}}!</h2>
+  <p>Current Score:</p>  
+  {{!-- StartQuiz Button --}}
+  <div class="start_btn">
+    <button>Tap to Play</button>
+    {{!-- Info Box --}}
+    <div class="info_box">
+      <div class="info_title">
+        <span>How to Play?</span>
+      </div>
+      <div class="info_list">
+        <div class="info"><li>After reading the question, select one of the options</li></div>
+        <div class="info"><li>You gain 10 points based on how many answers are correct</li></div>
+        <div class="info"><li>If an answer is incorrect, the correct answer will be revealed with a description</li></div>
+      </div>
+      <div class="buttons">
+        <button class="quit">Quit</button>
+        <button class="restart">Continue</button>
+      </div>
+    </div>
+    </div>
+    
+    <a href="/logout">Click here to Logout</a>
 </div>

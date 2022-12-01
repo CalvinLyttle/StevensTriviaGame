@@ -11,7 +11,7 @@ router.route("/").get(async (req, res) => {
     return;
   }
   res.render("userLogin", {
-    title: "Login or Registrer to Begin",
+    title: "Login or Register to Begin",
   });
 });
 
@@ -69,7 +69,7 @@ router
     }
     //  not authenticated -
     res.render("userLogin", {
-      title: "Login or Registrer to play the Trivia Game.",
+      title: "Login or Register to play the Trivia Game.",
     });
   })
   .post(async (req, res) => {

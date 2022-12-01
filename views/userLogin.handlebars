@@ -1,13 +1,13 @@
 {{!
 -If the user is not authenticaed and hits the endpoint 'GET /',  render this view with a login form.
 }}
-<form id="login-form" method="POST" action="/login">
+{{!-- <form id="login-form" method="POST" action="/login">
   <h2>Welcome to Stevens Trivia Game!</h2>
   <h4>{{title}}</h4>
 
   <label for="usernameInput">Username</label>
   <input
-    placeholder="Sophie"
+    placeholder="Name..."
     id="usernameInput"
     name="usernameInput"
   />
@@ -27,4 +27,47 @@
   {{/if}}
 
   <a href="/register">Click here to register!</a>
-</form>
+</form> --}}
+<div class="center">
+ <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="https://cliparting.com/wp-content/uploads/2017/04/Question-marks-clipart-3.jpg" class="img-fluid"
+                alt="Sample image">
+            </div>
+<div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+      <h1 class="text-center">Welcome to Stevens Trivia!</h1>
+        <form id="login-form" method="POST" action="/login">
+          <div class="divider d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class="lead fw-bold mx-3 mb-0">Login</p>
+            </div>
+            <br/>
+            <!-- Username input -->
+          <div class="mb-4">
+            <input type="username" name="usernameInput" id="usernameInput" class="form-control form-control-lg"
+              placeholder="Enter username" />
+            <label class="form-label" for="form3Example3">Username</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="mb-3">
+            <input type="password" name="passwordInput" id="passwordInput"  class="form-control form-control-lg"
+              placeholder="Enter password" />
+            <label class="form-label" for="form3Example4">Password</label>
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="submit" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+            <br/>
+            <p class=" fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="/register"
+                class="link-danger">Register</a></p>
+          </div>
+
+          {{#if error}}
+            <p class="error">{{error}}</p>
+          {{/if}}
+        </form>
+     
+  </div>
+  </div>
+    </div>
