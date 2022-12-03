@@ -10,9 +10,19 @@
         "guesses": ["Ducks", "Geese", "Steves", "Tigers"]
     },
     {
+        "question": "Who was Edward A. Stevens' wife?",
+        "answer": "Martha Bayard Stevens",
+        "guesses": ["Catherine Stevens", "Martha Bayard Stevens", "Mary Stevens", "Rachel Cox"]
+    },
+    {
         "question": "How many floors is the Stevens library?",
         "answer": "3",
         "guesses": ["1", "2", "3", "4"]
+    },
+    {
+        "question": "What is Stevens' mascot's name?",
+        "answer": "Attila",
+        "guesses": ["Attila", "Speedy", "Bill", "Sebastian"]
     },
     {
         "question": "What is the oldest building on campus?",
@@ -35,7 +45,7 @@
         "guesses": ["Edwin A Stevens", "Colonel John Stevens", "Wesley J Howe", "Thomas Jefferson"]
     },
     {
-        "question": "Who is the current president of Stevens",
+        "question": "Who is the current president of Stevens?",
         "answer": "Nariman Favardin",
         "guesses": ["Nariman Favardin", "Wesley J Howe", "Joe Biden", "Harold Reveche"]
     },
@@ -55,9 +65,24 @@
         "guesses": ["Accounting", "Data Visualization", "Political Science", "Literature"]
     },
     {
-        "question": "Which school is based in the Babbio building",
+        "question": "Which school is based in the Babbio building?",
         "answer": "School of Business",
         "guesses": ["School of Business", "School of Engineering", "College of Arts and Letters", "School of Systems and Enterprises"]
+    },
+    {
+        "question": "How many Undergraduate majors are there at Stevens?",
+        "answer": "35",
+        "guesses": ["35", "27", "53", "34"]
+    },
+    {
+        "question": "How many Master's Degree Programs are there at Stevens?",
+        "answer": "58",
+        "guesses": ["45", "58", "37", "20"]
+    },
+    {
+        "question": "How many Ph.D Programs are there at Stevens?",
+        "answer": "20",
+        "guesses": ["40", "17", "15", "20"]
     },
     {
         "question": "Which dorm was taken down to build the UCC towers?",

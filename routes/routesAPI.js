@@ -215,6 +215,19 @@ router.route("/login").post(async (req, res) => {
   }
 });
 
+router.route("/gameResults").get(async (req, res) => {
+  if (req.session.usernameInput) { //render -- handlebars
+    res.status(200).render("gameResults");
+    // res.redirect('/gameResults');
+    // req.session.destroy();
+    // res.redirect("/");
+  } else {
+    res.status(400).render('error', {
+      error: 'Could Not Load Game Results'
+    });
+  }
+});
+
 router.route("/logout").get(async (req, res) => {
   req.session.destroy();
   res.render("logout", {

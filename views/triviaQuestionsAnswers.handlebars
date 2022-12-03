@@ -1,13 +1,101 @@
 {{! when the user is on Welcome screen and button 'Tap to Play' is pressed, 
 routes to '/triviaQuestionsAnswers' and display this handlebar with quetsions and answers
 }}
-
+<div class="container">
 <div class="trivia">
-  <h1>{{{question}}}</h1>
-  <div id="answersBox">
-    <button {{#if a1Right}} class="answer" {{else}} class="wrong"{{/if}}>{{{a1}}}</button>
-    <button {{#if a2Right}} class="answer" {{else}} class="wrong"{{/if}}>{{{a2}}}</button>
-    <button {{#if a3Right}} class="answer" {{else}} class="wrong"{{/if}}>{{{a3}}}</button>
-    <button {{#if a4Right}} class="answer" {{else}} class="wrong"{{/if}}>{{{a4}}}</button>
+  <h1 class="questions">{{{question}}}</h1>
+    <div id="answersBox">
+      
+      <button  {{#if a1Right}} class="btn btn-secondary answer" type="button"data-bs-toggle="collapse" data-bs-target="#collapseRight" aria-expanded="false" aria-controls="collapseRight" {{else}} class=" btn btn-secondary wrong" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWrong" aria-expanded="false" aria-controls="collapseWrong"{{/if}}>{{{a1}}}</button>
+      <button  {{#if a2Right}} class="btn btn-secondary answer" type="button"data-bs-toggle="collapse" data-bs-target="#collapseRight" aria-expanded="false" aria-controls="collapseRight"{{else}} class=" btn btn-secondary wrong" type="button"data-bs-toggle="collapse" data-bs-target="#collapseWrong" aria-expanded="false" aria-controls="collapseWrong"{{/if}}>{{{a2}}}</button>
+      <button  {{#if a3Right}} class="btn btn-secondary answer" type="button"data-bs-toggle="collapse" data-bs-target="#collapseRight" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary wrong"  type="button"data-bs-toggle="collapse" data-bs-target="#collapseWrong" aria-expanded="false" aria-controls="collapseWrong"{{/if}}>{{{a3}}}</button>
+      <button  {{#if a4Right}} class="btn btn-secondary answer" type="button"data-bs-toggle="collapse" data-bs-target="#collapseRight" aria-expanded="false" aria-controls="collapseRight"{{else}} class=" btn btn-secondary wrong" type="button"data-bs-toggle="collapse" data-bs-target="#collapseWrong" aria-expanded="false" aria-controls="collapseWrong"{{/if}}>{{{a4}}}</button>
+    </div>
+    <a class="btn btn-primary" href="/trivia" type="button">Next</a>
+</div>
+</div>
+  <div class="end-game" >
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#GameModal">End Game</button>
+  </div>
+
+<div class="modal fade" id="GameModal" tabindex="-1" aria-labelledby="GameModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="GameModalLabel">Instructions</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you sure you want to stop playing?</p>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <a class="btn btn-secondary" data-bs-dismiss="modal" href="/gameResults">Yes</a>
+      </div>
+    </div>
   </div>
 </div>
+
+
+
+ {{#if a1Right}}
+<div class="collapse" id="collapseRight">
+  <div class="card card-body">
+    Correct! 10 points have been added!
+  </div>
+</div>
+{{else}}
+<div class="collapse" id="collapseWrong">
+  <div class="card card-body">
+    Incorrect! Try Again
+  </div>
+</div>
+{{/if}}
+
+{{#if a2Right}}
+<div class="collapse" id="collapseRight">
+  <div class="card card-body">
+    Correct! 10 points have been added!
+  </div>
+</div>
+{{else}}
+<div class="collapse" id="collapseWrong">
+  <div class="card card-body">
+    Incorrect! Try Again
+  </div>
+</div>
+{{/if}}
+
+{{#if a3Right}}
+<div class="collapse" id="collapseRight">
+  <div class="card card-body">
+    Correct! 10 points have been added!
+  </div>
+</div>
+{{else}}
+<div class="collapse" id="collapseWrong">
+  <div class="card card-body">
+    Incorrect! Try Again
+  </div>
+</div>
+{{/if}}
+
+{{#if a4Right}}
+<div class="collapse" id="collapseRight">
+  <div class="card card-body">
+    Correct! 10 points have been added!
+  </div>
+</div>
+{{else}}
+<div class="collapse" id="collapseWrong">
+  <div class="card card-body">
+    Incorrect! Try Again
+  </div>
+</div>
+{{/if}}
+
+
+
+
+
+
+
