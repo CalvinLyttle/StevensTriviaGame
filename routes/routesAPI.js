@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 let userData = require("../data/users");
 const datafuncs = require("../data/index");
+const { generateLeaderboardData } = require("../public/js/leaderboard");
 
 //this is the root route '/'
 router.route("/").get(async (req, res) => {
@@ -217,11 +218,28 @@ router.route("/login").post(async (req, res) => {
 
 router.route("/gameResults").get(async (req, res) => {
   if (req.session.usernameInput) { //render -- handlebars
-    res.status(200).render("gameResults");
+    let score = req.params.latestScore ? req.params.latestScore : 10;
+    console.log(score);
+    let leaderboard = generateLeaderboardData(req.session.usernameInput, score);
+    console.log(leaderboard)
+    res.status(200).render("gameResults", {
+      title: "Results",
+      u1Name: leaderboard[0].playerName,
+      u1Score: leaderboard[0].score,
+      u2Name: leaderboard[1].playerName,
+      u2Score: leaderboard[1].score,
+      u3Name: leaderboard[2].playerName,
+      u3Score: leaderboard[2].score,
+      u4Name: leaderboard[3].playerName,
+      u4Score: leaderboard[3].score
+    });
     // res.redirect('/gameResults');
     // req.session.destroy();
     // res.redirect("/");
   } else {
+    let score = req.gameScore ? req.gameScore : 10;
+    console.log(`Score: ${score}`);
+    generateLeaderboardData("Mike", 25);
     res.status(400).render('error', {
       error: 'Could Not Load Game Results'
     });
