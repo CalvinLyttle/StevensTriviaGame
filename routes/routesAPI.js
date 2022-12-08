@@ -12,7 +12,7 @@ router.route("/").get(async (req, res) => {
     return;
   }
   res.render("userLogin", {
-    title: "Login or Register to Begin",
+    title: "Login or Registrer to Begin",
   });
 });
 
@@ -48,13 +48,21 @@ router.route("/welcome").get(async (req, res) => {
 // hence, commenting it for now.
 
 router
-  .route("/trivia")
+  .route("/trivia/:attempted/:correct")
   .get(async (req, res) => {
     if (req.session.usernameInput) {
       // if user is authenticated
       let question = datafuncs.chooseQuestion();
+      let {attempted, correct} = req.params;
+      if (attempted === "10"){
+        res.render("gameResults", {attempted: attempted, correct: correct});
+        return;
+      }
       res.render("triviaQuestionsAnswers",
       {
+        attempted: parseInt(attempted)+1,
+        correct: correct,
+        corrInc: parseInt(correct)+1,
         question: question.question,
         a1: question.guesses[0],
         a1Right: question.guesses[0] === question.answer,
@@ -70,7 +78,7 @@ router
     }
     //  not authenticated -
     res.render("userLogin", {
-      title: "Login or Register to play the Trivia Game.",
+      title: "Login or Registrer to play the Trivia Game.",
     });
   })
   .post(async (req, res) => {
@@ -215,6 +223,7 @@ router.route("/login").post(async (req, res) => {
     });
   }
 });
+
 
 router.route("/gameResults").get(async (req, res) => {
   if (req.session.usernameInput) { //render -- handlebars
