@@ -1,8 +1,8 @@
 const existingScores = [
-    { playerName: "Jonny", score: 48, isUser: false },
-    { playerName: "Parag", score: 24, isUser: false },
-    { playerName: "Mark Zuck", score: 16, isUser: false },
-    { playerName: "Favardin", score: 4, isUser: false }
+    { playerName: "Jonny", score: 80, isUser: false },
+    { playerName: "Parag", score: 40, isUser: false },
+    { playerName: "Mark Zuck", score: 10, isUser: false },
+    { playerName: "Favardin", score: 20, isUser: false }
 ];
 
 const generateLeaderboardData = (userName, userScore) => {

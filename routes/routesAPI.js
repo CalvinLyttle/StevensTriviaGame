@@ -227,7 +227,7 @@ router.route("/login").post(async (req, res) => {
 
 router.route("/gameResults/:attempted/:correct").get(async (req, res) => {
   if (req.session.usernameInput) { //render -- handlebars
-    let score = (parseInt(req.params.attempted)/parseInt(req.params.correct))*10;
+    let score = (parseInt(req.params.correct)/parseInt(req.params.attempted))*100;
     console.log(score);
     let leaderboard = generateLeaderboardData(req.session.usernameInput, score);
     console.log(leaderboard)
