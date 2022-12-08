@@ -3,7 +3,7 @@
 
 const { user_collection } = require("../config/mongoCollections");
 const bCrypt = require("bcrypt");
-const saltRounds = 16;
+const saltRounds = 10;
 
 const createUser = async (username, password) => {
   //username validation

@@ -47,17 +47,6 @@ app.use(express.urlencoded({ extended: true }));
 app.engine('handlebars', exphbs.engine({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
-
-// app.use('/protected', (req,res,next) => {
-//     if(!req.session.usernameInput) {
-//         res.status(403).render('forbiddenAccess', {
-//             title: "Forbidden"
-//         })
-//     }else{
-//         next();
-//     }
-// })
-
 app.use((req,res,next) => {
     console.log('Current Timestamp: ', new Date().toUTCString());
     console.log('Request Method: ', req.method);

@@ -3,7 +3,7 @@ The Figma link for the app : https://www.figma.com/file/sXaLE4XsmLgoa3B9nEkr6D/S
 
 *Run 'npm install' to install -all of the necessary packages.
 
-*Finally, run 'node app.js'! The website is at: http://localhost:3000
+*Finally, run 'node app.js' or run 'npm start'! The website is at: http://localhost:3000
 
 We will have 5 screens ( as shown in Figma ) :- 
 
@@ -13,13 +13,15 @@ Screen 2: Welcome - Nidhi + Parul
 
 Screen 3: Questions/Answers  - Calvin
 
-Screen 4: Continue playing or not - Savil
+Screen 4: Continue playing or not & timer - Savil
 
 Screen 5: Scoreboard
 
+Screen 6: Create Dummy Data
+
 Styling - Nidhi 
 
-PPT - 
+PPT - Nidhi
 
 Tentative Functions :-
 
