@@ -11,7 +11,7 @@ routes to '/triviaQuestionsAnswers' and display this handlebar with quetsions an
       <a type="button"  {{#if a3Right}} href="/trivia/{{attempted}}/{{corrInc}}" class="btn btn-secondary answer" type="button" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary wrong"  type="button" aria-expanded="false" aria-controls="collapseWrong" href="/trivia/{{attempted}}/{{correct}}"{{/if}}>{{{a3}}}</a>
       <a type="button"  {{#if a4Right}} href="/trivia/{{attempted}}/{{corrInc}}" class="btn btn-secondary answer" type="button" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary wrong" type="button" aria-expanded="false" aria-controls="collapseWrong" href="/trivia/{{attempted}}/{{correct}}"{{/if}}>{{{a4}}}</a>
     </div>
-    <a class="btn btn-primary" href="/trivia/{{attempted}}/{{corrInc}}" type="button">Next</a>
+    {{!-- <a class="btn btn-primary" href="/trivia/{{attempted}}/{{corrInc}}" type="button">Next</a> --}}
 </div>
 </div>
   <div class="end-game" >
