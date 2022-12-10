@@ -6,11 +6,12 @@ with the 'Current Score' information and a button 'Tap to Play'
 <div class="text-center">
   <div class="header">
   <h2>{{title}} {{name}}!</h2>
-  <p>Current Score: </p>
+  <p>Current Score: {{score}}</p>
   {{!-- {{score}} or something like that --}}
   </div> 
   
-    <a class="btn btn-primary" style="margin-top: 0%;" href="/trivia" type="button">Tap to Play</a>
+    <a class="btn btn-primary" href="/trivia/0/0" style="margin-top: 0%;" type="button">Tap to Play</a>
+
   
     <div class="info_box">
       <div class="info_title">
@@ -38,6 +39,7 @@ with the 'Current Score' information and a button 'Tap to Play'
       </div>
       <div class="modal-body">
         <p>After reading the question, select one of the options.</p>
+        <p>Green on button means Correct, Red on button means incorrect</p>
         <p>You gain 10 points based on how many answers are correct.</p>
         <p>If an answer is incorrect, the correct answer will be revealed with a description</p>
        

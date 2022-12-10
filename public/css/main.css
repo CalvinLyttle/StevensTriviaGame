@@ -1,7 +1,16 @@
-*{
-   /* font-size: 12pt; */
-   margin-top: 1em;
-  
+
+body{
+    background-image: url('https://cdn.woorise.com/template/wp-content/uploads/sites/62/2017/10/trivia-quiz-template-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-fluid{
+    margin-left:5%;
+    /* margin-bottom: -2rem; */
+}
+.divider{
+    color:black;
 }
 
 p{
@@ -116,18 +125,23 @@ svg{
     /* width: 700px; */
     height:100px
 }
-/*.gameResults {
-    /* background-color: #5fce5f; */
-/* text-align: center; */
-/* align-items: center; */
+.login,.register{
+    margin-top: 8%;
+}
+/* .gameResults {
+    /* background-color: #5fce5f;
+     /* text-align: center; */
+    /* align-items: center;  */
     /* animation-name: example;
-    width: 1000%;
-    height: 55rem;
-    margin-top: -2em;
-    animation-duration: 60s; */
-    /* overflow-y: hidden; } */
-  
-  /* @keyframes example {
+    width: 100%;
+    height: 53rem;
+    /* margin-top: -2em; */
+    /* animation-duration: 30s;  */
+    /* overflow-y: hidden; } */ 
+   
+
+/*   
+   @keyframes example {
     0%   {background-color: red;}
     10%  {background-color:pink;}
     25%  {background-color: yellow;}

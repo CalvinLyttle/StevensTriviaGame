@@ -3,15 +3,15 @@ routes to '/triviaQuestionsAnswers' and display this handlebar with quetsions an
 }}
 <div class="container">
 <div class="trivia">
+  <h2>Question #{{attempted}}</h2>
   <h1 class="questions">{{{question}}}</h1>
     <div id="answersBox">
-      
-      <button  {{#if a1Right}} class="btn btn-secondary answer" type="button"data-bs-toggle="collapse" data-bs-target="#collapseRight" aria-expanded="false" aria-controls="collapseRight" {{else}} class=" btn btn-secondary wrong" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWrong" aria-expanded="false" aria-controls="collapseWrong"{{/if}}>{{{a1}}}</button>
-      <button  {{#if a2Right}} class="btn btn-secondary answer" type="button"data-bs-toggle="collapse" data-bs-target="#collapseRight" aria-expanded="false" aria-controls="collapseRight"{{else}} class=" btn btn-secondary wrong" type="button"data-bs-toggle="collapse" data-bs-target="#collapseWrong" aria-expanded="false" aria-controls="collapseWrong"{{/if}}>{{{a2}}}</button>
-      <button  {{#if a3Right}} class="btn btn-secondary answer" type="button"data-bs-toggle="collapse" data-bs-target="#collapseRight" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary wrong"  type="button"data-bs-toggle="collapse" data-bs-target="#collapseWrong" aria-expanded="false" aria-controls="collapseWrong"{{/if}}>{{{a3}}}</button>
-      <button  {{#if a4Right}} class="btn btn-secondary answer" type="button"data-bs-toggle="collapse" data-bs-target="#collapseRight" aria-expanded="false" aria-controls="collapseRight"{{else}} class=" btn btn-secondary wrong" type="button"data-bs-toggle="collapse" data-bs-target="#collapseWrong" aria-expanded="false" aria-controls="collapseWrong"{{/if}}>{{{a4}}}</button>
+      <a type="button"  {{#if a1Right}} href="/trivia/{{attempted}}/{{corrInc}}" class="btn btn-secondary btn-lg answer" type="button" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary btn-lg wrong" type="button"  aria-expanded="false" aria-controls="collapseWrong" href="/trivia/{{attempted}}/{{correct}}"{{/if}}>{{{a1}}}</a>
+      <a type="button"  {{#if a2Right}} href="/trivia/{{attempted}}/{{corrInc}}" class="btn btn-secondary btn-lg answer" type="button" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary btn-lg wrong" type="button"  aria-expanded="false" aria-controls="collapseWrong" href="/trivia/{{attempted}}/{{correct}}"{{/if}}>{{{a2}}}</a>
+      <a type="button"  {{#if a3Right}} href="/trivia/{{attempted}}/{{corrInc}}" class="btn btn-secondary btn-lg answer" type="button" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary btn-lg wrong"  type="button" aria-expanded="false" aria-controls="collapseWrong" href="/trivia/{{attempted}}/{{correct}}"{{/if}}>{{{a3}}}</a>
+      <a type="button"  {{#if a4Right}} href="/trivia/{{attempted}}/{{corrInc}}" class="btn btn-secondary btn-lg answer" type="button" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary btn-lg wrong" type="button" aria-expanded="false" aria-controls="collapseWrong" href="/trivia/{{attempted}}/{{correct}}"{{/if}}>{{{a4}}}</a>
     </div>
-    <a class="btn btn-primary" href="/trivia" type="button">Next</a>
+    {{!-- <a class="btn btn-primary" href="/trivia/{{attempted}}/{{corrInc}}" type="button">Next</a> --}}
 </div>
 </div>
   <div class="end-game" >
@@ -29,15 +29,16 @@ routes to '/triviaQuestionsAnswers' and display this handlebar with quetsions an
         <p>Are you sure you want to stop playing?</p>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-        <a class="btn btn-secondary" data-bs-dismiss="modal" href="/gameResults">Yes</a>
+        <a class="btn btn-secondary" data-bs-dismiss="modal" href="gamessults/:attempted/:correct">Yes</a>
       </div>
     </div>
   </div>
 </div>
+</div>
 
 
 
- {{#if a1Right}}
+{{#if a1Right}}
 <div class="collapse" id="collapseRight">
   <div class="card card-body">
     Correct! 10 points have been added!
