@@ -1,7 +1,16 @@
-*{
-   /* font-size: 12pt; */
-   margin-top: 1em;
-  
+
+body{
+    background-image: url('https://cdn.woorise.com/template/wp-content/uploads/sites/62/2017/10/trivia-quiz-template-background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.img-fluid{
+    margin-left:5%;
+    /* margin-bottom: -2rem; */
+}
+.divider{
+    color:black;
 }
 
 p{
