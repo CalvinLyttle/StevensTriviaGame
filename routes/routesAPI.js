@@ -103,34 +103,18 @@ router
     if (typeof usernameInput !== "string" || usernameInput.includes(" ")) {
       res.status(400).render("userRegister", {
         title: "SignUp",
-        error: "Invalid username - Hint 'SophieAniston' is valid & 'Sophie Aniston' is invalid.",
+        error: "Invalid username",
       });
       return;
     }
     if (
       typeof passwordInput !== "string" ||
-      passwordInput.trim().length < 6 ||
-      passwordInput.includes(" ")
+      passwordInput.trim().length < 8
     ) {
       res.status(400).render("userRegister", {
         title: "SignUp",
         error:
-          "Invalid password - password should be atleast 6 char long,and should not not include epmty spaces.",
-      });
-      return;
-    }
-    const regexUpperCase = /[A-Z]/;
-    const regexNumber = /[0-9]/;
-    const regexSpecialChar = /[!@#\$%\^\&*\)\(+=._-]/;
-    if (
-      passwordInput.search(regexUpperCase) === -1 ||
-      passwordInput.search(regexNumber) === -1 ||
-      passwordInput.search(regexSpecialChar) === -1
-    ) {
-      res.status(400).render("userRegister", {
-        title: "SignUp",
-        error:
-          "Invalid password - atleast one uppercase,one number and one speacial char is required.",
+          "Invalid password - password should be atleast 8 char long.",
       });
       return;
     }

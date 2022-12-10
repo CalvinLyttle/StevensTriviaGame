@@ -29,53 +29,73 @@
   <a href="/register">Click here to register!</a>
 </form> --}}
 <div class="center">
- <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="https://cliparting.com/wp-content/uploads/2017/04/Question-marks-clipart-3.jpg" class="img-fluid"
-                alt="Sample image">
-            </div>
-<div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-      <h1 class="text-center">Welcome to Stevens Trivia!</h1>
-        <form id="login-form" method="POST" action="/login">
-          <div class="divider d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-            <p class="lead fw-bold mx-3 mb-0">Login</p>
-            </div>
-            <br/>
-            <!-- Username input -->
-          <div class="mb-4">
-            <input type="username" name="usernameInput" id="usernameInput" class="form-control form-control-lg"
-              placeholder="Enter username" />
-            <label class="form-label" for="form3Example3">Username</label>
-          </div>
-
-          <!-- Password input -->
-          <div class="mb-3">
-            <input type="password" name="passwordInput" id="passwordInput"  class="form-control form-control-lg"
-              placeholder="Enter password" />
-            <label class="form-label" for="form3Example4">Password</label>
-          </div>
-
-          <div class="text-center text-lg-start mt-4 pt-2">
-            <button type="submit" class="btn btn-primary btn-lg"
-              style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-            <br/>
-            <p class=" fw-bold mt-2 pt-1">Don't have an account? <a href="/register"
-                class="link-danger">Register</a></p>
-          </div>
-
-          {{#if error}}
-            <p class="error">{{error}}</p>
-          {{/if}}
-        </form>
-     
-  </div>
-  </div>
+  <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="col-md-9 col-lg-6 col-xl-5">
+      <img
+        src="https://cliparting.com/wp-content/uploads/2017/04/Question-marks-clipart-3.jpg"
+        class="img-fluid"
+        alt="Sample image"
+      />
     </div>
-  <div class="container-md">  
-        <!-- Copyright -->
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <span >
-            Copyright © 2022. All rights reserved.
-        </span>
-        </footer>     
+    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+      <h1 style="text-align: center;">Welcome to Stevens Trivia!</h1>
+      <form id="login-form" method="POST" action="/login">
+        <div
+          class="divider d-flex flex-row align-items-center justify-content-center justify-content-lg-start"
+        >
+          {{! <p class="lead fw-bold mx-3 mb-0">Login</p> }}
+        </div>
+        <br />
+        <!-- Username input -->
+        <div class="mb-4">
+          <input
+            type="username"
+            name="usernameInput"
+            id="usernameInput"
+            class="form-control form-control-lg"
+            placeholder="Enter username"
+          />
+          <label class="form-label" for="form3Example3">Username</label>
+        </div>
+
+        <!-- Password input -->
+        <div class="mb-3">
+          <input
+            type="password"
+            name="passwordInput"
+            id="passwordInput"
+            class="form-control form-control-lg"
+            placeholder="Enter password"
+          />
+          <label class="form-label" for="form3Example4">Password</label>
+        </div>
+
+        <div class="text-center text-lg-start mt-4 pt-2">
+          <button
+            type="submit"
+            class="btn btn-primary btn-lg"
+            style="padding-left: 2.5rem; padding-right: 2.5rem; margin-left:29%; margin-bottom:10%"
+          >Login</button>
+          <br />
+        </div>
+
+        {{#if error}}
+          <p class="error">{{error}}</p>
+        {{/if}}
+
+        <p class="fw-bold mt-2 pt-1" style="margin-top: 20%;">Don't have an
+          account?
+          <a href="/register" class="link-danger">Register</a></p>
+      </form>
+
+    </div>
   </div>
+</div>
+<div class="container-md">
+  <!-- Copyright -->
+  <footer class="d-flex flex-wrap py-9 my-9 border-top">
+    <span style="color: grey;">
+      Copyright © 2022. All rights reserved.
+    </span>
+  </footer>
+</div>
