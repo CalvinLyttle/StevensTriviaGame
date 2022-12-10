@@ -5,7 +5,7 @@ routes to '/triviaQuestionsAnswers' and display this handlebar with quetsions an
 <div class="trivia">
   <h1 class="questions">{{{question}}}</h1>
     <div id="answersBox">
-      
+      {{!-- <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" data-bs-title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button> --}}
       <a type="button"  {{#if a1Right}} href="/trivia/{{attempted}}/{{corrInc}}" class="btn btn-secondary answer" type="button" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary wrong" type="button"  aria-expanded="false" aria-controls="collapseWrong" href="/trivia/{{attempted}}/{{correct}}"{{/if}}>{{{a1}}}</a>
       <a type="button"  {{#if a2Right}} href="/trivia/{{attempted}}/{{corrInc}}" class="btn btn-secondary answer" type="button" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary wrong" type="button"  aria-expanded="false" aria-controls="collapseWrong" href="/trivia/{{attempted}}/{{correct}}"{{/if}}>{{{a2}}}</a>
       <a type="button"  {{#if a3Right}} href="/trivia/{{attempted}}/{{corrInc}}" class="btn btn-secondary answer" type="button" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary wrong"  type="button" aria-expanded="false" aria-controls="collapseWrong" href="/trivia/{{attempted}}/{{correct}}"{{/if}}>{{{a3}}}</a>
@@ -29,7 +29,7 @@ routes to '/triviaQuestionsAnswers' and display this handlebar with quetsions an
         <p>Are you sure you want to stop playing?</p>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-        <a class="btn btn-secondary" data-bs-dismiss="modal" href="/gameResults">Yes</a>
+        <a class="btn btn-secondary" data-bs-dismiss="modal" href="/gameResults/{{attempted}}/{{corrInc}}">Yes</a>
       </div>
     </div>
   </div>

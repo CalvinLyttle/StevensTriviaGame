@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/CalvinLyttle/StevensTriviaGame#readme",
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "bcrypt": "^5.1.0",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.2",
