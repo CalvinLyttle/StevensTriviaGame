@@ -11,50 +11,8 @@ You should have a label for both the username and password inputs referencing th
 You will also have a link on this page that links to '/' and has the text "Already have an account? Click here to log-in"
 
 }}
-{{!-- <form
-  id="registration-form"
-  method="POST"
-  action="/register"
->
-  <h2>{{title}}</h2>
-
-  <label for="emailInput">Email</label>
-  <input
-    placeholder="sophie@gmail.com"
-    id="emailInput"
-    name="emailInput"
-    type="email"
-    pattern=".+@gmail\.com"
-  />
-  <label for="usernameInput">Username</label>
-  <input
-    placeholder="Sophie"
-    id="usernameInput"
-    name="usernameInput"
-  />
-
-  <label for="passwordInput">Password</label>
-  <input
-    type="password"
-    placeholder="password"
-    name="passwordInput"
-    id="passwordInput"
-  />
-
-  <button type="submit">Register</button>
-
-  {{#if error}}
-    <p>{{error}}</p>
-  {{/if}}
-
-  <a href="/login">Already have an account? Click here to log-in</a>
-</form> --}}
-<div class="center">
+<div class="register">
  <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-md-9 col-lg-6 col-xl-5">
-                <img src="https://cliparting.com/wp-content/uploads/2017/04/Question-marks-clipart-3.jpg" class="img-fluid"
-                alt="Sample image">
-            </div>
 <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
         <form id="registration-form" method="POST" action="/register">
           <div class="divider d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
@@ -94,7 +52,7 @@ You will also have a link on this page that links to '/' and has the text "Alrea
             <p class="error">{{error}}</p>
           {{/if}}
         </form>
-      </div>
+      {{!-- </div> --}}
     </div>
   </div> 
   <div class="container-md">  
@@ -104,4 +62,5 @@ You will also have a link on this page that links to '/' and has the text "Alrea
             Copyright © 2022. All rights reserved.
         </span>
         </footer>     
+  </div>
   </div>

@@ -125,6 +125,9 @@ svg{
     /* width: 700px; */
     height:100px
 }
+.login,.register{
+    margin-top: 8%;
+}
 /* .gameResults {
     /* background-color: #5fce5f;
      /* text-align: center; */

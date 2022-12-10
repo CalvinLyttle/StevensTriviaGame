@@ -232,6 +232,7 @@ router.route("/gameResults/:attempted/:correct").get(async (req, res) => {
     let leaderboard = generateLeaderboardData(req.session.usernameInput, score);
     console.log(leaderboard)
     res.status(200).render("gameResults", {
+      name: req.session.usernameInput,
       score: score,
       title: "Results",
       u1Name: leaderboard[0].playerName,
