@@ -112,14 +112,14 @@ svg{
     cursor: pointer;
 }
 .logout{
-    margin-top: 25em;
+    margin-top: 10em;
     text-align: center;
 }
 .header{
     background-color: #c7f5e8;
     padding: 10px 0 10px 0px ;
     border-radius: 15px;
-    /*margin: 100px; */
+    margin: 100px;
     align-items: center;
     /* width: 700px; */
     height:100px
