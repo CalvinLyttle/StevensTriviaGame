@@ -49,7 +49,7 @@ const checkUser = async (username, password) => {
     username: username.toLowerCase(),
   });
   if (!exists)
-    throw `${username} is not registered with us - Click the link below to register.`;
+    throw `"${username}" is not registered with us - Click the link below to register.`;
 
   const comparePassword = await bCrypt.compare(password, exists.password);
 
