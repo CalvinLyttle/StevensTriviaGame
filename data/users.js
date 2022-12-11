@@ -41,8 +41,8 @@ const checkUser = async (username, password) => {
   if (typeof username !== "string") throw "Invalid username.";
 
   //password validation
-  if (typeof password !== "string" || password.trim().length < 8)
-    throw "Invalid password - pasword should be atleast 8 char long.";
+  if (typeof password !== "string")
+    throw "Invalid password - should be atleast 8 char long.";
 
   const usersCollection = await user_collection();
   const exists = await usersCollection.findOne({

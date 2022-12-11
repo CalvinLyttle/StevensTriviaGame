@@ -97,7 +97,7 @@ router
       res.status(400).render("userRegister", {
         title: "SignUp",
         error:
-          "Invalid password - password should be atleast 8 char long.",
+          "Invalid password - should be atleast 8 char long.",
       });
       return;
     }
@@ -152,13 +152,12 @@ router.route("/login").post(async (req, res) => {
     return;
   }
   if (
-    typeof passwordInput !== "string" ||
-    passwordInput.trim().length < 8 
+    typeof passwordInput !== "string"
   ) {
     res.status(400).render("userLogin", {
       title: "Login",
       error:
-        "Invalid password - password should be atleast 8 char long.",
+        "Invalid password - should be atleast 8 char long.",
     });
     return;
   }

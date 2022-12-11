@@ -5,6 +5,7 @@ body{
     background-size: cover;
 }
 
+
 .img-fluid{
     margin-left:5%;
     /* margin-bottom: -2rem; */
@@ -72,7 +73,6 @@ svg{
 .center{
   margin: auto;
   width: 80%;
-
   margin-left: 100px; 
   padding: 10px;
 }
@@ -81,7 +81,7 @@ svg{
     padding: 0 30px;
     justify-content: center;
     min-height: 350px;
-    margin-top: 45%;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -92,6 +92,10 @@ svg{
 .error{
     color:red;
     font-weight: bold;
+    box-shadow: 5px 5px 15px 5px #1F618D;
+    border-radius: 8px;
+    justify-content: center;
+    padding: 0 30px;
 }
 .container{
     margin-top:5em;
