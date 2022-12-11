@@ -1,14 +1,20 @@
 <div class="text-center">
-    <h2>Hooray {{name}}! You have reached {{score}} points!</h2>
-    <div>
-        <h3>Leaderboard</h3>
-        <p>1. {{u1Name}}   {{u1Score}}</p>
-        <p>2. {{u2Name}}   {{u2Score}}</p>
-        <p>3. {{u3Name}}   {{u3Score}}</p>
-        <p>4. {{u4Name}}   {{u4Score}}</p>
-    </div>
-    <a class="btn btn-primary" href="/trivia/0/0" type="button">Tap to Play Again?</a>
-    <a class="btn btn-primary" href="/logout" type="button">Log Out</a>
+
+  <h2 style="margin-top: -60px;">
+    {{#if score}} Hooray {{name}}! {{else}} Oops {{name}}! {{/if}}
+    You have scored
+    {{score}}
+    points!</h2>
+
+  {{!-- <h2>Hooray {{name}}! You have reached {{score}} points!</h2> --}}
+  <div>
+    <h3 style="margin-top: 5%;">Leaderboard</h3>
+    <p>1. {{u1Name}} {{u1Score}}</p>
+    <p>2. {{u2Name}} {{u2Score}}</p>
+    <p>3. {{u3Name}} {{u3Score}}</p>
+    <p>4. {{u4Name}} {{u4Score}}</p>
+  </div>
+  <a class="btn btn-primary" style="margin-top: 10%;" href="/trivia/0/0" type="button">Play Again?</a>
+  <a class="btn btn-primary" style="margin-top: 10%;" href="/logout" type="button">Log Out</a>
 
 </div>
-

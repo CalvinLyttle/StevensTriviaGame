@@ -8,7 +8,7 @@ const existingScores = [
 const generateLeaderboardData = (userName, userScore) => {
     let leaderboard = JSON.parse(JSON.stringify(existingScores));
     console.log('leaderboard - ',leaderboard);
-    leaderboard.push({ playerName: userName, score: userScore, isUser: true });
+    leaderboard.push({ playerName: userName, score: Number.parseInt(userScore), isUser: true });
     console.log('leaderboard - ',leaderboard);
     leaderboard.sort((a, b) => b.score - a.score);
     return leaderboard

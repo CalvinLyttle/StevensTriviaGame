@@ -54,7 +54,7 @@ const checkUser = async (username, password) => {
   const comparePassword = await bCrypt.compare(password, exists.password);
 
   if (!comparePassword)
-    throw "Please enter the correct password for the given username and login again. Thanks!";
+    throw "Please enter the correct password";
 
   return { authenticatedUser: true };
 };
