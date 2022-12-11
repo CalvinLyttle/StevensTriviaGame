@@ -41,8 +41,8 @@ const checkUser = async (username, password) => {
   if (typeof username !== "string") throw "Invalid username.";
 
   //password validation
-  if (typeof password !== "string" || password.trim().length < 8)
-    throw "Invalid password - pasword should be atleast 8 char long.";
+  if (typeof password !== "string")
+    throw "Invalid password - should be atleast 8 char long.";
 
   const usersCollection = await user_collection();
   const exists = await usersCollection.findOne({
@@ -54,17 +54,13 @@ const checkUser = async (username, password) => {
   const comparePassword = await bCrypt.compare(password, exists.password);
 
   if (!comparePassword)
-    throw "Please enter the correct password for the given username and login again. Thanks!";
+    throw "Please enter the correct password";
 
   return { authenticatedUser: true };
 };
 
 module.exports = {
-  createUser, // - parul
-  checkUser, // - parul
-  //welcomeScreen functions - Nidhi
-  //question/answer functions - Calvin ? or maybe from public/js/questionsAnswers
-  //scoreBoard functions - Joseph?
-  //continue playing functions - Savil
+  createUser,
+  checkUser
 };
 
