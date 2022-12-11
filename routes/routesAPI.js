@@ -12,7 +12,7 @@ router.route("/").get(async (req, res) => {
     return;
   }
   res.render("userLogin", {
-    title: "Login or Registrer to Begin",
+    title: "Login or Register to Begin",
   });
 });
 
@@ -56,7 +56,7 @@ router
     }
     //  not authenticated -
     res.render("userLogin", {
-      title: "Login or Registrer to play the Trivia Game.",
+      title: "Login or Register to play the Trivia Game.",
     });
   });
 
@@ -118,7 +118,18 @@ router
       });
     }
   });
-
+  router.route("/gameResults").get(async (req, res) => {
+    if (req.session.usernameInput) { //render -- handlebars
+      res.status(200).render("gameResults");
+      // res.redirect('/gameResults');
+      // req.session.destroy();
+      // res.redirect("/");
+    } else {
+      res.status(400).render('error', {
+        error: 'Could Not Load Game Results'
+      });
+    }
+  });
 router.route("/login").post(async (req, res) => {
   //code here for POST
   const { usernameInput, passwordInput } = req.body;
