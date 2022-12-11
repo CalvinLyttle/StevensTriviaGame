@@ -29,7 +29,7 @@ routes to '/triviaQuestionsAnswers' and display this handlebar with quetsions an
         <p>Are you sure you want to stop playing?</p>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-        <a class="btn btn-secondary" data-bs-dismiss="modal" href="gamessults/:attempted/:correct">Yes</a>
+        <a class="btn btn-secondary" href="/gameResults/{{attempted}}/{{correct}}">Yes</a>
       </div>
     </div>
   </div>
@@ -113,5 +113,16 @@ $(document).ready(function(){
 });
 </script>
 
+<script>
+$('.answer').click(function(e) {
+  e.preventDefault();
+  setTimeout(function(url) { window.location = url }, 1000, this.href);
+});
+</script>
 
-
+<script>
+$('.wrong').click(function(e) {
+  e.preventDefault();
+  setTimeout(function(url) { window.location = url }, 1000, this.href);
+});
+</script>
