@@ -60,11 +60,7 @@ const checkUser = async (username, password) => {
 };
 
 module.exports = {
-  createUser, // - parul
-  checkUser, // - parul
-  //welcomeScreen functions - Nidhi
-  //question/answer functions - Calvin ? or maybe from public/js/questionsAnswers
-  //scoreBoard functions - Joseph?
-  //continue playing functions - Savil
+  createUser,
+  checkUser
 };
 

@@ -1,6 +1,3 @@
-{{! when the user is on Welcome screen and button 'Tap to Play' is pressed, 
-routes to '/triviaQuestionsAnswers' and display this handlebar with quetsions and answers
-}}
 <div class="container">
 <div class="trivia">
   <h2>Question #{{attempted}}</h2>
@@ -12,6 +9,8 @@ routes to '/triviaQuestionsAnswers' and display this handlebar with quetsions an
       <a type="button"  {{#if a4Right}} href="/trivia/{{attempted}}/{{corrInc}}" class="btn btn-secondary btn-lg answer" type="button" aria-expanded="false" aria-controls="collapseRight"{{else}} class="btn btn-secondary btn-lg wrong" type="button" aria-expanded="false" aria-controls="collapseWrong" href="/trivia/{{attempted}}/{{correct}}"{{/if}}>{{{a4}}}</a>
     </div>
     {{!-- <a class="btn btn-primary" href="/trivia/{{attempted}}/{{corrInc}}" type="button">Next</a> --}}
+    {{!-- <a  type="button" {{#if correct}} href="/trivia/{{attempted}}/{{corrInc}}" class="btn btn-primary"{{else}} class="btn btn-primary" type="button" href="/trivia/{{attempted}}/{{correct}}"{{/if}}>Next</a> --}}
+
 </div>
 </div>
   <div class="end-game" >
@@ -29,12 +28,11 @@ routes to '/triviaQuestionsAnswers' and display this handlebar with quetsions an
         <p>Are you sure you want to stop playing?</p>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-        <a class="btn btn-secondary" data-bs-dismiss="modal" href="gamessults/:attempted/:correct">Yes</a>
+ <a href="/gameResults/{{attempted}}/{{correct}}" class="btn btn-secondary">Yes</a></p>
       </div>
     </div>
   </div>
 </div>
-
 
 
 {{#if a1Right}}
