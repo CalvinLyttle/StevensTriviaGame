@@ -181,12 +181,12 @@ router.route("/login").post(async (req, res) => {
 router.route("/gameResults/:attempted/:correct").get(async (req, res) => {
   if (req.session.usernameInput) { //render -- handlebars
     let score = (parseInt(req.params.correct)/parseInt(req.params.attempted))*100;
-    console.log('score - ',(score));
+    console.log('score - ',Number.parseInt(score));
     let leaderboard = generateLeaderboardData(req.session.usernameInput, score);
-    console.log(leaderboard)
+    console.log('leaderboard - ',leaderboard);
     res.status(200).render("gameResults", {
       name: req.session.usernameInput,
-      score: Number(score),
+      score: score == 0? 0:Number.parseInt(score),
       title: "Results",
       u1Name: leaderboard[0].playerName,
       u1Score: leaderboard[0].score,
