@@ -1,4 +1,3 @@
-  
 body{
     background-image: url('https://cdn.woorise.com/template/wp-content/uploads/sites/62/2017/10/trivia-quiz-template-background.png');
     background-repeat: no-repeat;
@@ -119,8 +118,8 @@ svg{
 .header{
     background-color: #c7f5e8;
     padding: 10px 0 10px 0px ;
-    border-radius: 5px;
-    margin: 100px;
+    border-radius: 15px;
+    /*margin: 100px; */
     align-items: center;
     /* width: 700px; */
     height:100px

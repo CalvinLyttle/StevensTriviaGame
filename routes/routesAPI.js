@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 let userData = require("../data/users");
 const datafuncs = require("../data/index");
+const { generateLeaderboardData } = require("../public/js/leaderboard");
 
 //this is the root route '/'
 router.route("/").get(async (req, res) => {
@@ -54,7 +55,7 @@ router
       let question = datafuncs.chooseQuestion();
       let {attempted, correct} = req.params;
       if (attempted === "10"){
-        res.render("gameResults", {attempted: attempted, correct: correct});
+        res.redirect(`/gameResults/${attempted}/${correct}`);
         return;
       }
       res.render("triviaQuestionsAnswers",
@@ -111,34 +112,18 @@ router
     if (typeof usernameInput !== "string" || usernameInput.includes(" ")) {
       res.status(400).render("userRegister", {
         title: "SignUp",
-        error: "Invalid username - Hint 'SophieAniston' is valid & 'Sophie Aniston' is invalid.",
+        error: "Invalid username",
       });
       return;
     }
     if (
       typeof passwordInput !== "string" ||
-      passwordInput.trim().length < 6 ||
-      passwordInput.includes(" ")
+      passwordInput.trim().length < 8
     ) {
       res.status(400).render("userRegister", {
         title: "SignUp",
         error:
-          "Invalid password - password should be atleast 6 char long,and should not not include epmty spaces.",
-      });
-      return;
-    }
-    const regexUpperCase = /[A-Z]/;
-    const regexNumber = /[0-9]/;
-    const regexSpecialChar = /[!@#\$%\^\&*\)\(+=._-]/;
-    if (
-      passwordInput.search(regexUpperCase) === -1 ||
-      passwordInput.search(regexNumber) === -1 ||
-      passwordInput.search(regexSpecialChar) === -1
-    ) {
-      res.status(400).render("userRegister", {
-        title: "SignUp",
-        error:
-          "Invalid password - atleast one uppercase,one number and one speacial char is required.",
+          "Invalid password - password should be atleast 8 char long.",
       });
       return;
     }
@@ -230,6 +215,39 @@ router.route("/login").post(async (req, res) => {
     res.status(500).render("userLogin", {
       title: "Login",
       error: error.message ? error.message : error,
+    });
+  }
+});
+
+
+router.route("/gameResults/:attempted/:correct").get(async (req, res) => {
+  if (req.session.usernameInput) { //render -- handlebars
+    let score = (parseInt(req.params.correct)/parseInt(req.params.attempted))*100;
+    console.log(score);
+    let leaderboard = generateLeaderboardData(req.session.usernameInput, score);
+    console.log(leaderboard)
+    res.status(200).render("gameResults", {
+      name: req.session.usernameInput,
+      score: score,
+      title: "Results",
+      u1Name: leaderboard[0].playerName,
+      u1Score: leaderboard[0].score,
+      u2Name: leaderboard[1].playerName,
+      u2Score: leaderboard[1].score,
+      u3Name: leaderboard[2].playerName,
+      u3Score: leaderboard[2].score,
+      u4Name: leaderboard[3].playerName,
+      u4Score: leaderboard[3].score
+    });
+    // res.redirect('/gameResults');
+    // req.session.destroy();
+    // res.redirect("/");
+  } else {
+    let score = req.gameScore ? req.gameScore : 10;
+    console.log(`Score: ${score}`);
+    generateLeaderboardData("Mike", 25);
+    res.status(400).render('error', {
+      error: 'Could Not Load Game Results'
     });
   }
 });
