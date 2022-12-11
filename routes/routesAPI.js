@@ -97,7 +97,7 @@ router
       res.status(400).render("userRegister", {
         title: "SignUp",
         error:
-          "Invalid password - password should be atleast 8 char long.",
+          "Invalid password - should be atleast 8 char long.",
       });
       return;
     }
@@ -118,6 +118,7 @@ router
       });
     }
   });
+
   router.route("/gameResults").get(async (req, res) => {
     if (req.session.usernameInput) { //render -- handlebars
       res.status(200).render("gameResults");
@@ -151,13 +152,12 @@ router.route("/login").post(async (req, res) => {
     return;
   }
   if (
-    typeof passwordInput !== "string" ||
-    passwordInput.trim().length < 8 
+    typeof passwordInput !== "string"
   ) {
     res.status(400).render("userLogin", {
       title: "Login",
       error:
-        "Invalid password - password should be atleast 8 char long.",
+        "Invalid password - should be atleast 8 char long.",
     });
     return;
   }
@@ -180,12 +180,12 @@ router.route("/login").post(async (req, res) => {
 router.route("/gameResults/:attempted/:correct").get(async (req, res) => {
   if (req.session.usernameInput) { //render -- handlebars
     let score = (parseInt(req.params.correct)/parseInt(req.params.attempted))*100;
-    console.log(score);
+    console.log('score - ',Number.parseInt(score));
     let leaderboard = generateLeaderboardData(req.session.usernameInput, score);
-    console.log(leaderboard)
+    console.log('leaderboard - ',leaderboard);
     res.status(200).render("gameResults", {
       name: req.session.usernameInput,
-      score: score,
+      score: score == 0? 0:Number.parseInt(score),
       title: "Results",
       u1Name: leaderboard[0].playerName,
       u1Score: leaderboard[0].score,
