@@ -1,39 +1,20 @@
-# StevensTriviaGame
-The Figma link for the app : https://www.figma.com/file/sXaLE4XsmLgoa3B9nEkr6D/Stevens-Trivia-Game?node-id=21%3A377&t=TMHjkSyde6usyzYJ-0
+# StevensTriviaGame - Stevens Trivia is a web application that allows users who have an interest in online games and want to learn about Stevens Institute of Technology to play this game.
 
-*Run 'npm install' to install -all of the necessary packages.
+The Figma link for the app :
+https://www.figma.com/file/sXaLE4XsmLgoa3B9nEkr6D/Stevens-Trivia-Game?node-id=21%3A377&t=TMHjkSyde6usyzYJ-0
 
-*Finally, run 'node app.js' or run 'npm start'! The website is at: http://localhost:3000
+- Run 'npm install' to install all of the necessary packages. In order to install a particular package, do 'npm install <package-name>'
 
-We will have 5 screens ( as shown in Figma ) :- 
+- Dependencies include:  
+   "@popperjs/core" ,
+  "bcrypt",
+  "bootstrap",
+  "bootstrap-icons",
+  "express",
+  "express-handlebars",
+  "express-session",
+  "handlebars",
+  "mongodb"
 
-Screen 1 : Login  - Nidhi + Parul
-
-Screen 2: Welcome - Nidhi + Parul
-
-Screen 3: Questions/Answers  - Calvin
-
-Screen 4: Continue playing or not & timer - Savil
-
-Screen 5: Scoreboard
-
-Screen 6: Create Dummy Data
-
-Styling - Nidhi 
-
-PPT - Nidhi
-
-Tentative Functions :-
-
-1. Calculator 
-2. Function to store the scores 
-3. Function to display the score  
-
-Tentative functions :- 
-1. Middlewares 
-2. Timer - can store in db based - will decide towards the ending
-
-//Parul :- 
-installed bcrypt for hashing password.
-installed express and express-handlebars for routing.
-
+- To run the application, do 'node app.js' or run 'npm start' .
+  The website is at: http://localhost:3000
