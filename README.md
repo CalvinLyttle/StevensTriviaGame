@@ -1,4 +1,4 @@
-# StevensTriviaGame - 
+# StevensTriviaGame 
 
 Stevens Trivia is a web application that allows users who have an interest in online games and want to learn about Stevens Institute of Technology to play this game.
 
