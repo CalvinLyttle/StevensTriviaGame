@@ -5,7 +5,7 @@ Stevens Trivia is a web application that allows users who have an interest in on
 The Figma link for the app :
 https://www.figma.com/file/sXaLE4XsmLgoa3B9nEkr6D/Stevens-Trivia-Game?node-id=21%3A377&t=TMHjkSyde6usyzYJ-0
 
-- Run 'npm install' to install all of the necessary packages. In order to install a particular package, do 'npm install <package-name>'
+- Run 'npm install' to install the necessary packages. In order to install a particular package, do 'npm install <package-name>'
 
 - Dependencies include:  
    "@popperjs/core" ,
