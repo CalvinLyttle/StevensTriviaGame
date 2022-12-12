@@ -1,4 +1,6 @@
-# StevensTriviaGame - Stevens Trivia is a web application that allows users who have an interest in online games and want to learn about Stevens Institute of Technology to play this game.
+# StevensTriviaGame - 
+
+Stevens Trivia is a web application that allows users who have an interest in online games and want to learn about Stevens Institute of Technology to play this game.
 
 The Figma link for the app :
 https://www.figma.com/file/sXaLE4XsmLgoa3B9nEkr6D/Stevens-Trivia-Game?node-id=21%3A377&t=TMHjkSyde6usyzYJ-0
